@@ -4,29 +4,44 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Oswald:wght@200..700&display=swap"
 		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+	<link rel="stylesheet" href="css/style.css">
 	<title>Test Site</title>
 </head>
 
 <body>
 
+	<ul id="slide-out" class="sidenav">
+		<li><a href="#!"><i class="material-icons">home</i>Основна</a></li>
+		<li><a href="#!"><i class="material-icons">people</i>Ми</a></li>
+		<li><a href="#!"><i class="material-icons">grade</i>Послуги</a></li>
+		<li><a href="#!"><i class="material-icons">phone</i>Зв*язок з нами</a></li>
+		<li>
+			<div class="divider"></div>
+		</li>
+		<li><a href="#!" class="sidenav-close"><i class="material-icons">close</i>Згорнути</a></li>
+	</ul>
+	<!-- <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+
 	<header class="header">
 		<div class="container">
 			<div class="header__title">
 				<img src="./img/logo.svg" alt="Logo" class="logo">
-				<button class="burger">
+				<a class="burger sidenav-trigger" data-target="slide-out">
 					<span class="burger__line"></span>
 					<span class="burger__line"></span>
 					<span class="burger__line"></span>
-				</button>
+				</a>
 			</div>
-			<h1 class="h1">РЕАЛИЗУЕМ КРУПНЕЙШИЕ
-				ПРОЕКТЫ</h1>
-			<h4 class="h4">стадионы, газопроводы, мосты, дамбы</h4>
+			<h1 class="h1">РЕАЛІЗУЄМО НАЙБІЛЬШІ
+				ПРОЄКТИ</h1>
+			<h4 class="h4">стадіони, газопроводи, мости, дамби</h4>
 		</div>
 	</header>
 
@@ -36,23 +51,23 @@
 			<div class="container">
 				<div class="about__grid">
 					<div class="about__grid-item">
-						<h4 class="about__h4">26</h4>
-						<h5 class="about__h5">лет</h5>
+						<h4 class="about__h4">30</h4>
+						<h5 class="about__h5">років</h5>
 						<p class="about__p">на ринку</p>
 					</div>
 					<div class="about__grid-item">
-						<h4 class="about__h4">26</h4>
-						<h5 class="about__h5">лет</h5>
+						<h4 class="about__h4">30</h4>
+						<h5 class="about__h5">років</h5>
 						<p class="about__p">на ринку</p>
 					</div>
 					<div class="about__grid-item">
-						<h4 class="about__h4">26</h4>
-						<h5 class="about__h5">лет</h5>
+						<h4 class="about__h4">30</h4>
+						<h5 class="about__h5">років</h5>
 						<p class="about__p">на ринку</p>
 					</div>
 					<div class="about__grid-item">
-						<h4 class="about__h4">26</h4>
-						<h5 class="about__h5">лет</h5>
+						<h4 class="about__h4">30</h4>
+						<h5 class="about__h5">років</h5>
 						<p class="about__p">на ринку</p>
 					</div>
 
@@ -87,6 +102,25 @@
 			</div>
 	</section>
 
+	<!-- Modal Trigger
+	<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+	<!-- Modal Structure -->
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Заголовок Модал вікна</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias sint corrupti possimus vero sequi, blanditiis
+				vitae nesciunt minus molestiae est doloremque non, illo, a cupiditate. Doloremque, animi odio. Repellendus, rem
+				obcaecati numquam molestias voluptatum nihil fugit eligendi vitae tempore suscipit nobis esse qui ab quaerat
+				placeat aut blanditiis! Culpa minus necessitatibus recusandae doloremque nemo doloribus officiis reprehenderit,
+				ea ad officia error, dolor, mollitia itaque exercitationem voluptatem veniam! Eveniet, dolorem aut? Ratione,
+				veritatis debitis mollitia obcaecati odit adipisci neque, officiis aliquam voluptatibus asperiores ea dolore
+				quia fuga labore ipsum dolorum ut delectus! Eveniet, consequuntur! Illum dicta, dolor aut pariatur numquam
+				libero?</p>
+		</div>
+
+	</div>
+
 	<section class="request">
 		<div class="container">
 			<div class="request__flex">
@@ -95,10 +129,10 @@
 					<h5 class="request__h5">Реалізовуємо найсміливіші рішення</h5>
 				</div>
 				<div class="request__flex-right">
-					<button class="request__btn">
+					<a href="#modal1" class="request__btn modal-trigger">
 						<img src="./img/.svg" alt="Envelope" class="request__icon">
 						Ваш запит(и)
-					</button>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -135,28 +169,28 @@
 	<section class="portfolio">
 		<div class="portfolio__grid">
 			<div class="portfolio__grid-item">
-				<img class="portfolio__img" src="./img/portfolio-item.jpg" alt="Portfolio Item">
+				<img class="portfolio__img materialboxed" src="./img/portfolio-item.jpg" alt="Portfolio Item">
 			</div>
 			<div class="portfolio__grid-item">
-				<img class="portfolio__img" src="./img/portfolio-item.jpg" alt="Portfolio Item">
+				<img class="portfolio__img materialboxed" src="./img/portfolio-item.jpg" alt="Portfolio Item">
 			</div>
 			<div class="portfolio__grid-item">
-				<img class="portfolio__img" src="./img/portfolio-item.jpg" alt="Portfolio Item">
+				<img class="portfolio__img materialboxed" src="./img/portfolio-item.jpg" alt="Portfolio Item">
 			</div>
 			<div class="portfolio__grid-item">
-				<img class="portfolio__img" src="./img/portfolio-item.jpg" alt="Portfolio Item">
+				<img class="portfolio__img materialboxed" src="./img/portfolio-item.jpg" alt="Portfolio Item">
 			</div>
 			<div class="portfolio__grid-item">
-				<img class="portfolio__img" src="./img/portfolio-item.jpg" alt="Portfolio Item">
+				<img class="portfolio__img materialboxed" src="./img/portfolio-item.jpg" alt="Portfolio Item">
 			</div>
 			<div class="portfolio__grid-item">
-				<img class="portfolio__img" src="./img/portfolio-item.jpg" alt="Portfolio Item">
+				<img class="portfolio__img materialboxed" src="./img/portfolio-item.jpg" alt="Portfolio Item">
 			</div>
 			<div class="portfolio__grid-item">
-				<img class="portfolio__img" src="./img/portfolio-item.jpg" alt="Portfolio Item">
+				<img class="portfolio__img materialboxed" src="./img/portfolio-item.jpg" alt="Portfolio Item">
 			</div>
 			<div class="portfolio__grid-item">
-				<img class="portfolio__img" src="./img/portfolio-item.jpg" alt="Portfolio Item">
+				<img class="portfolio__img materialboxed" src="./img/portfolio-item.jpg" alt="Portfolio Item">
 			</div>
 		</div>
 
@@ -166,38 +200,38 @@
 		<div class="container">
 			<h2 class="text-h2 section__h2">Відповіді на питання</h2>
 			<div class="question_items">
-				<div class="question_item">
-					<h3 class="text-h3 question_h3 close">Працюєте?</h3>
+				<details class="question_item">
+					<summary class="text-h3 question_h3">Працюєте?</summary>
 					<p class="text-p question_p">
 						Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною
 						"рибою" для текстів на латиниці з початку XVI ст. На той час якийсь безіменний друкар створив велику
 						колекцію розмірів і форм шрифтів, використовуючи Lorem Ipsum для друку зразків.
 					</p>
-				</div>
-				<div class="question_item">
-					<h3 class="text-h3 question_h3 open">Працюєте?</h3>
+				</details>
+				<details class="question_item">
+					<summary class="text-h3 question_h3">Працюєте?</summary>
 					<p class="text-p question_p">
 						Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною
 						"рибою" для текстів на латиниці з початку XVI ст. На той час якийсь безіменний друкар створив велику
 						колекцію розмірів і форм шрифтів, використовуючи Lorem Ipsum для друку зразків.
 					</p>
-				</div>
-				<div class="question_item">
-					<h3 class="text-h3 question_h3 close">Працюєте?</h3>
+				</details>
+				<details class="question_item">
+					<summary class="text-h3 question_h3">Працюєте?</summary>
 					<p class="text-p question_p">
 						Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною
 						"рибою" для текстів на латиниці з початку XVI ст. На той час якийсь безіменний друкар створив велику
 						колекцію розмірів і форм шрифтів, використовуючи Lorem Ipsum для друку зразків.
 					</p>
-				</div>
-				<div class="question_item">
-					<h3 class="text-h3 question_h3 close">Працюєте ?</h3>
+				</details>
+				<details class="question_item">
+					<summary class="text-h3 question_h3">Працюєте ?</summary>
 					<p class="text-p question_p">
 						Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною
 						"рибою" для текстів на латиниці з початку XVI ст. На той час якийсь безіменний друкар створив велику
 						колекцію розмірів і форм шрифтів, використовуючи Lorem Ipsum для друку зразків.
 					</p>
-				</div>
+				</details>
 			</div>
 		</div>
 	</section>
@@ -224,6 +258,118 @@
 		</div>
 	</section>
 
+	<section class="reviews">
+		<div class="container">
+			<h2 class="text-h2 reviews__h2">Відгуки про нашу роботу</h2>
+			<div class="reviews__grid">
+				<div class="reviews__grid-item">
+					<div class="reviews__card">
+						<div class="reviews__quotes">“</div>
+						<p class="text-p-reviews">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні.
+							Lorem Ipsum є стандартною
+							"рибою" для текстів на латиниці з початку XVI ст. На той час якийсь безіменний друкар створив велику
+							колекцію розмірів і форм шрифтів, використовуючи Lorem Ipsum для друку зразків.
+						</p>
+					</div>
+					<h4 class="text-h4">Каменских Анастасія, <span class="reviews__author-accent">OOO "Назва"</span></h4>
+				</div>
+				<div class="reviews__grid-item">
+					<div class="reviews__card">
+						<div class="reviews__quotes">“</div>
+						<p class="text-p-reviews">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні.
+							Lorem Ipsum є стандартною
+							"рибою" для текстів на латиниці з початку XVI ст. На той час якийсь безіменний друкар створив велику
+							колекцію розмірів і форм шрифтів, використовуючи Lorem Ipsum для друку зразків.</p>
+					</div>
+					<h4 class="text-h4">Каменских Анастасія, <span class="reviews__author-accent">OOO "Назва"</span></h4>
+				</div>
+				<div class="reviews__grid-item">
+					<div class="reviews__card">
+						<div class="reviews__quotes">“</div>
+						<p class="text-p-reviews">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні.
+							Lorem Ipsum є стандартною
+							"рибою" для текстів на латиниці з початку XVI ст. На той час якийсь безіменний друкар створив велику
+							колекцію розмірів і форм шрифтів, використовуючи Lorem Ipsum для друку зразків.</p>
+					</div>
+					<h4 class="text-h4">Каменских Анастасія, <span class="reviews__author-accent">OOO "Назва"</span></h4>
+				</div>
+			</div>
+	</section>
+
+	<!-- Modal Structure -->
+	<div id="modal2" class="modal">
+		<div class="modal-content">
+			<h4>Заголовок Модал вікна</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias sint corrupti possimus vero sequi, blanditiis
+				vitae nesciunt minus molestiae est doloremque non, illo, a cupiditate. Doloremque, animi odio. </p>
+		</div>
+
+	</div>
+
+	<section class="request">
+		<div class="container">
+			<div class="request__flex">
+				<div class="request__flex-left">
+					<h4 class="request__h4">Працюєйте з нами!</h4>
+					<h5 class="request__h5">Чекаємо на вашi запити!</h5>
+				</div>
+				<div class="request__flex-right">
+					<a href="#modal2" class="request__btn modal-trigger">
+						<img src="./img/.svg" alt="Envelope" class="request__icon">
+						Ваш запит(и)
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contacts">
+		<div class="container">
+			<h2 class="text-h2 contacts__h2">Контакт</h2>
+			<div class="contacts__grid">
+				<div class="contacts__item">
+					<img class="contacts__icon" src="./img/adress.svg" alt="Location">
+					<h3 class="text-h3 contacts__h3 contacts__h3-gray">Місце знаходження:</h3>
+					<h3 class="text-h3 contacts__h3">Проспект Умовний 70, <br>кв. 45-47</h3>
+				</div>
+
+				<div class="contacts__item">
+					<img class="contacts__icon" src="./img/phone.svg" alt="Tel">
+					<h3 class="text-h3 contacts__h3 contacts__h3-gray">Номер:</h3>
+					<h3 class="text-h3 contacts__h3">
+						<a href="tel:#">5342342543545</a>
+						<br>
+						<a href="tel:#">5342342543545</a>
+					</h3>
+				</div>
+
+				<div class="contacts__item">
+					<img class="contacts__icon" src="./img/time.svg" alt="Time">
+					<h3 class="text-h3 contacts__h3 contacts__h3-gray">Графік:</h3>
+					<h3 class="text-h3 contacts__h3">, нд-вт <br> 12:00-18:00</h3>
+				</div>
+
+				<div class="contacts__item">
+					<img class="contacts__icon" src="./img/email-icon.svg" alt="Post">
+					<h3 class="text-h3 contacts__h3 contacts__h3-gray">Пошта:</h3>
+					<h3 class="text-h3 contacts__h3 contacts__h3-accent">
+						<a href="mailto:#">fhh@umail.com</a>
+					</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-flex">
+				<p class="text-p footer__copyright">Company</p>
+				<p class="text-p footer__brand">Brand</p>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
